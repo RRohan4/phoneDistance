@@ -11,6 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <provider
+            android:name=".StackPhotoProvider"
+            android:authorities="${applicationId}.stack-photos"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/stack_photo_paths" />
+        </provider>
         <activity
             android:name=".MainActivity"
             android:exported="true"
